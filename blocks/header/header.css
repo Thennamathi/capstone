@@ -3,7 +3,14 @@ header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
   z-index: 2;
+  
+}
+
+header{
   position: fixed;
+  width: 100%;
+  z-index:20;
+  top:0;
 }
 
 header nav {
@@ -15,10 +22,18 @@ header nav {
   align-items: center;
   gap: 0 24px;
   margin: auto;
-  max-width: 1248px;
+  max-width: 873pt;
   height: var(--nav-height);
-  padding: 0 24px;
+  padding: 75px 14px 50px 14px;
   font-family: var(--body-font-family);
+  margin: 0 auto;
+  float: unset !important;
+}
+
+header nav.scrolled {
+  padding-bottom: 5px;
+  padding-top: 40px;
+
 }
 
 header nav[aria-expanded='true'] {
