@@ -349,3 +349,68 @@ margin-block-end :13.5px;
 margin-block-start: 27px;
 margin-bottom: 13.5px;
 }
+
+/* Magazine Page */
+
+main:has(.section.magazine-image) {
+  padding: 0 14px;
+  > .section.magazine-image {
+    > .default-content-wrapper {
+      > picture {
+        > img {
+          margin: 0 7px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  > .section.magazine-text {
+    > .default-content-wrapper {
+      > h2:first-child {
+        all:unset;
+        font-family: var(--fontFamilySerif, "Asar", Georgia, "Times New Roman", Times, serif);
+        font-weight: var(--fontWeightNormal, normal);
+        margin-bottom: 13.5px;
+        margin-top: 27px;
+        font-size:40px;
+      }
+      >h2:first-child::before{
+        border-bottom: none;
+      }
+      > p{
+        font-size:18px;
+        line-height: 2.5;
+        margin: 0 0 13.5px;
+        text-align: justify;
+        font-family: var(--fontFamilySansSerif,"Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif);
+      }
+    }
+  }
+}
+
+
+@media (width>1024px){
+  main:has(.section.magazine-image) {
+    display:flex;
+    flex-wrap:wrap
+  }
+  .section.magazine-image {
+    flex:0 0 100%;
+  }
+  .section.magazine-text{
+    flex: 0 0 66%;
+    padding-right:60px;
+    padding-left:40px;
+  }
+  .section.magazine-list{
+    flex:0 1 20%
+  }
+}
+.form-container.default-content-wrapper>h2 {
+  margin-left: 30px;
+  margin-top: 5px;
+  color: #ffea00;
+  font-size: 40px;
+}
+
